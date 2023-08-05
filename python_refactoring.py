@@ -1,6 +1,6 @@
 num = 0
 
-def process1():
+def enterAppreciation():
     print( 'Please enter a rating from 1 to 5' )
     point = input()
     while(not point.isdecimal or int(point) <= 0 or int(point) > 5):
@@ -13,7 +13,7 @@ def process1():
     file_pc. write( f'{ post } \n')
     file_pc.close()
                  
-def process2():
+def printAppreciations():
     print( 'results so far' )
     read_file = open("data.txt", "r")
     print( read_file.read() )
@@ -27,9 +27,9 @@ while (num != 3):
     num = int(input())
     
     if num == 1:
-        process1()       
+        enterAppreciation()       
     elif num == 2:
-        process2()
+        printAppreciations()
     elif num == 3:
         print( 'Terminate' )
         break # Syntax to end the iterating process       
